@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Counter</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: antiquewhite;
+            padding: 100px;
+            /* margin: 50px; */
+        }
+
+        .container{
+            text-align: center;
+        }
+
+        .container h1{
+            margin-bottom: 20px;
+        }
+        .counters{
+            margin-top: 30px;
+            font-size: 20px;
+        }
+        .container .counters #cc{
+            margin-left: 700px;
+        }
+        #textbox{
+            font-size: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Word Counter</h1>
+        <textarea id="textbox" name="" id="" cols="130" rows="20"></textarea>
+        <div class="counters">
+            <span id="wc">Word Count : 0</span>
+            <span id="cc">Character Count: 0</span>
+        </div>
+    </div>
+
+    <script>
+
+        let textbox = document.getElementById('textbox');
+        let wordCount = document.getElementById("wc");
+        let charCount = document.getElementById("cc");
+
+        let wc = 0;
+        let cc = 0;
+        // textbox.addEventListener('input',function(){
+        //     let stringArray = textbox.value.split(" ");
+        //     let arrayLength = stringArray.length;
+        //     for(let i = 0 ; i < stringArray.length ; i++){
+        //         let temp = stringArray[i].length;
+        //         cc += temp;
+        //     }
+        //     cc += arrayLength - 1;
+        //     wc += stringArray.length
+        //     wordCount.innerHTML = "Word Count : "+wc;  
+        //     charCount.innerHTML = "Character Count : "+cc;
+            
+        //     wc = 0;
+        //     cc = 0;
+        // });
+
+        textbox.addEventListener('input',function(){
+            let text = this.value;
+            cc = text.length;
+            charCount.innerHTML = "Character Count : "+cc;
+            text = text.trim();
+            let words = text.split(" ");
+            let cleanList = words.filter(function(elm){
+                return elm != "";
+            });
+            wc = cleanList.length;
+            wordCount.innerHTML = "Word Count : "+wc;
+        });
+
+    </script>
+
+</body>
+</html>
