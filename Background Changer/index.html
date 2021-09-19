@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Changer</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 20px 100px;
+        }
+
+        h1{
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        img{
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+            text-align: center;
+        }
+        p{
+            font-size: 18px;
+            text-align: justify;
+            line-height: 2;
+        }
+
+        #color-switcher .btn{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: solid grey 2px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        #color-switcher{
+            text-align: right;
+        }
+
+        #white{
+            background-color: #fff;
+        }
+        #aqua{
+            background-color: Aqua;
+        }
+        #violet{
+            background-color: violet;
+        }
+        #black{
+            background-color: black;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="color-switcher">
+        <span class="btn" id="white" onclick="changeBG('white')"></span>
+        <span class="btn" id="aqua" onclick="changeBG('aqua')"></span>
+        <span class="btn" id="violet" onclick="changeBG('violet')"></span>
+        <span class="btn" id="black" onclick="changeBG('black')"></span>
+    </div>
+    <h1 id="heading">About us</h1>
+    <img src="images/map.png" alt="">
+    <p id="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium voluptatum, nostrum delectus facere officia
+        quasi impedit minima ipsa ea! Vel asperiores quo quia quibusdam quae, quaerat iusto sed nihil in provident
+        aspernatur. Obcaecati hic aspernatur in, exercitationem, excepturi praesentium sapiente culpa veritatis omnis
+        suscipit itaque sequi numquam fugiat repudiandae, rem illum distinctio nisi magnam aut! Nihil amet eveniet,
+        deserunt maxime vel deleniti. Necessitatibus blanditiis itaque adipisci suscipit quia, minima inventore vel ex
+        sunt ipsum magnam dolor reiciendis. Natus expedita quisquam, officiis consectetur aliquid cum dolore adipisci
+        iste totam, neque optio architecto beatae illo vel perspiciatis animi et exercitationem molestias. Ipsa quidem
+        exercitationem cum, fugiat ratione, nihil quia in corrupti blanditiis repellat facilis non excepturi, obcaecati
+        delectus nemo dolor tenetur aliquid? Perspiciatis voluptates omnis animi voluptatem aliquam commodi quaerat cum.
+        Mollitia dicta aliquam reiciendis ipsam assumenda sequi aliquid eos voluptatum! Molestias blanditiis sequi,
+        dolorem quasi placeat minus assumenda unde velit rem rerum ullam, qui necessitatibus eveniet dicta nostrum
+        ratione officia voluptas cum obcaecati, quas repudiandae nesciunt! Consequuntur repudiandae accusamus possimus
+        deleniti quisquam quia quas nemo modi? Itaque quidem repellat tempore sint laudantium magni quia voluptate aut
+        distinctio, officia, placeat minima odio similique fuga pariatur totam delectus praesentium cupiditate ipsam
+        tempora. At rerum odio repellendus fugit voluptatum aliquid ea hic consequatur impedit qui nulla cupiditate,
+        dolores itaque laboriosam quod debitis amet molestias adipisci voluptas, perferendis enim architecto molestiae?
+        Fuga, quisquam in. Cupiditate impedit dignissimos a ipsa esse at, mollitia tempora, aperiam, veniam quidem quia.
+        Dignissimos doloribus fugit sed quod delectus laboriosam ullam nemo, debitis repudiandae vel veritatis! Maiores
+        blanditiis debitis culpa nostrum eveniet provident, esse quasi odio iusto ut iure modi quod illum voluptatibus
+        porro accusamus. Ut odit beatae repellat saepe qui, aliquam rerum consequatur est, dicta natus corrupti facere
+        sunt repudiandae molestiae dolore nesciunt sequi. Cum qui excepturi ad soluta fugiat illo ducimus hic at.
+        Consequuntur praesentium fugit veritatis dolor deleniti suscipit perferendis illo delectus saepe aliquam
+        corrupti obcaecati eum aspernatur quis, expedita nemo officiis quo sequi. Ullam, error voluptatum officiis minus
+        veniam obcaecati repudiandae corporis fugiat amet eligendi animi voluptas temporibus cum atque cumque beatae.
+        Distinctio quisquam dignissimos natus debitis voluptatibus possimus, et tempore nisi nobis, cumque non! Numquam,
+        eaque sint voluptatibus minus commodi porro, ut quae assumenda suscipit facere nihil dignissimos sequi! Ut
+        aspernatur, numquam quae blanditiis animi illum repellendus excepturi nihil cumque laudantium et alias
+        voluptatibus dolorum! Est architecto veniam suscipit, perferendis animi, quaerat, repellendus iste tempora optio
+        ipsam ipsum incidunt facere harum fugiat sed cumque deserunt vitae dolore repudiandae temporibus enim. Nisi, sed
+        expedita fugiat cupiditate quasi ipsam placeat voluptatibus ipsa dolor quibusdam magni maxime, quisquam ex,
+        illum alias consequatur vitae at numquam impedit adipisci sapiente? Similique, quisquam magnam, sed veniam
+        molestiae maiores repellat nobis voluptatibus dolores beatae, libero cumque sit ratione eius culpa quidem alias
+        non consectetur cupiditate ipsa labore in odio. Numquam, quia modi distinctio nam dignissimos illo ab, debitis
+        nemo culpa corrupti cupiditate magni excepturi id similique veritatis, pariatur commodi velit adipisci ad est!
+        Natus ea laborum ipsum delectus numquam, modi blanditiis laboriosam dolor.</p>
+
+    <script>
+
+        function changeBG(color){
+            if(color === 'black'){
+                document.getElementById('heading').style.color = "white";
+                document.getElementById('para').style.color = "white";
+            }else{
+                document.getElementById('heading').style.color = "black";
+                document.getElementById('para').style.color = "black";
+            }
+            document.body.style = `background-color:${color}`;
+        }
+
+    </script>
+
+
+</body>
+
+</html>
