@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Navbar</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        header{
+            text-align: center;
+        }
+        #logo{
+            width: 250px;
+            height: auto;
+        }
+        #menu-bar{
+            text-align: center;
+            background-color: cadetblue;
+            text-decoration: none;
+        }
+
+        #menu-bar li{
+            display: inline-block;
+            padding: 15px 10px;
+            list-style-type: none;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .container{
+            text-align: center;
+            padding: 50px 100px; 
+        }
+        #abt-img{
+            width: 100%;
+        }
+        p{
+            text-align: justify;
+            line-height: 2;
+        }
+        .sticky{
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="https://www.logodesign.net/images/nature-logo.png" id="logo" alt="">
+    </header>
+
+    <nav id="menu-bar">
+        <li>Home</li>
+        <li>About us</li>
+        <li>Our Team</li>
+        <li>Client</li>
+        <li>Contact us</li>
+    </nav>
+
+    <div class="container">
+        <h1>About Us</h1>
+        <img id="abt-img" src="images/map.png" alt="">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi totam praesentium et excepturi aspernatur
+            sit, assumenda suscipit minus quibusdam necessitatibus est hic ipsum temporibus repellat corporis,
+            reiciendis expedita enim libero unde similique. Omnis ipsa perspiciatis inventore quod voluptatem eligendi
+            beatae modi cumque suscipit numquam nobis quibusdam dolorum quidem, illo corrupti rem nulla ad enim neque
+            harum explicabo laboriosam dolores ipsam doloribus! Non assumenda hic impedit doloribus similique natus
+            ullam magnam culpa sapiente dolorum illum consequuntur aspernatur minus deleniti, itaque sit quae sed
+            facilis exercitationem voluptatibus aut, laudantium voluptatem quam? Vitae hic beatae autem optio aut sint
+            perspiciatis nisi eveniet quaerat ab, at, ipsa similique adipisci culpa mollitia molestiae ullam
+            consequuntur. Aspernatur doloribus laboriosam error veniam ut esse nesciunt. Ab adipisci modi quas unde,
+            vero praesentium quaerat ea vitae temporibus officia, dignissimos neque ipsum similique delectus soluta quos
+            eaque laboriosam reiciendis porro illo necessitatibus tempora perspiciatis. Pariatur voluptates ullam quod
+            vero sit, fugiat eaque ipsa omnis reprehenderit, distinctio nemo earum quis neque natus dicta ipsum
+            perferendis accusantium quo veniam totam sint blanditiis exercitationem. Iste, debitis ea? Nesciunt eos
+            obcaecati voluptatem voluptas modi sapiente ratione reprehenderit repellat ducimus veritatis consequuntur
+            voluptatibus, quas provident molestias tempore deserunt vitae ad magnam labore temporibus dicta numquam
+            dolorum fugiat? Quod expedita, doloremque culpa ipsa architecto beatae dignissimos dolorum maxime
+            consectetur ipsum delectus tenetur quas quibusdam facilis quisquam soluta molestiae qui perspiciatis
+            laboriosam minima veniam mollitia neque! Quisquam laborum aut delectus rerum voluptate molestias impedit
+            architecto possimus nam eius numquam temporibus, expedita sequi voluptates blanditiis officia voluptatem
+            amet vitae odit eveniet nihil neque. Quas ea quo quasi voluptatibus illo nihil minus officiis quam natus vel
+            earum, doloribus voluptates nesciunt necessitatibus rem omnis corporis. Laboriosam voluptas dolore ex fuga
+            voluptatum modi tempore vero, necessitatibus perferendis ipsam corporis illum quisquam iure quae cupiditate
+            ad officia quis maiores at rerum consectetur voluptatem sunt ducimus temporibus? Totam nesciunt magnam
+            excepturi iusto quod deserunt, est obcaecati neque pariatur sapiente suscipit vel quo assumenda blanditiis.
+            Cumque aspernatur, aliquid maxime obcaecati dicta soluta modi explicabo ipsa possimus veniam quisquam
+            necessitatibus dolores perferendis culpa, nesciunt nam dolore! Quae corporis repellendus magni in nobis,
+            culpa a cum nemo expedita porro nesciunt odio ipsam cupiditate dolore qui molestiae soluta ad odit
+            blanditiis veritatis enim corrupti consequuntur consequatur! Iste, quod consequuntur ullam quasi fugiat
+            voluptate veniam quis quos reprehenderit debitis distinctio accusamus totam doloribus voluptates cupiditate
+            error beatae illum explicabo eaque quo dolore facere provident. Corrupti vitae, ipsam illum, reprehenderit
+            enim hic dolores nisi atque a beatae, maiores eum blanditiis. Libero laborum placeat quas pariatur atque
+            error repellat quia blanditiis deleniti laudantium porro vel ad minima autem qui soluta est expedita
+            molestias, consequatur esse architecto recusandae molestiae ullam quae. Inventore illo error tempore fuga
+            maxime vel impedit recusandae, optio facere repellat iure nam quasi officiis consectetur dolores corrupti
+            libero maiores dolor iusto explicabo sequi natus voluptates vero! Quae cumque at molestiae cum veritatis
+            voluptate neque, necessitatibus eos sit obcaecati corrupti rem? Et tenetur consectetur reprehenderit? Ea,
+            quae nostrum voluptatibus eos sequi voluptatem velit itaque aliquid perferendis temporibus officiis.
+        </p>
+    </div>
+
+
+    <!-- Javascript -----------------> -->
+    <script>
+        let navbar = document.getElementById('menu-bar');
+        window.addEventListener('scroll',function(){
+            
+            if(window.pageYOffset > 189.967){
+                navbar.classList.add('sticky');
+            }else{
+                navbar.classList.remove('sticky');
+            }
+
+        });
+
+
+
+    </script>
+
+</body>
+
+</html>
